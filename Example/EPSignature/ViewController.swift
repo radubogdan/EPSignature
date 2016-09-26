@@ -22,12 +22,12 @@ class ViewController: UIViewController, EPSignatureDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func onTouchSignatureButton(_ sender: AnyObject) {
+    @IBAction func onTouchSignatureButton(sender: AnyObject) {
         let signatureVC = EPSignatureViewController(signatureDelegate: self, showsDate: true, showsSaveSignatureOption: true)
         signatureVC.subtitleText = "I agree to the terms and conditions"
         signatureVC.title = "John Doe"
         let nav = UINavigationController(rootViewController: signatureVC)
-        present(nav, animated: true, completion: nil)
+        presentViewController(nav, animated: true, completion: nil)
     }
 
     func epSignature(_: EPSignatureViewController, didCancel error : NSError) {

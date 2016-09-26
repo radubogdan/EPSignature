@@ -12,18 +12,18 @@ import Foundation
 
 extension UIViewController {
     
-    func showAlert(_ message: String) {
+    func showAlert(message: String) {
         showAlert(message, andTitle: "")
     }
     
-    func showAlert(_ message: String, andTitle title: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+    func showAlert(message: String, andTitle title: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         
         // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
         
         // show the alert
-        self.present(alert, animated: true, completion: nil)
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }
 
